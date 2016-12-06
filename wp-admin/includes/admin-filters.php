@@ -68,6 +68,8 @@ add_action( 'admin_head-nav-menus.php', '_wp_delete_orphaned_draft_menu_items' )
 // Plugin hooks.
 add_filter( 'whitelist_options', 'option_update_filter' );
 
+// Plugin ACF Custom Field hooks
+
 // Plugin Install hooks.
 add_action( 'install_plugins_featured',               'install_dashboard' );
 add_action( 'install_plugins_upload',                 'install_plugins_upload' );
