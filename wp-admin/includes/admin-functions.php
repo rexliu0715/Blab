@@ -18,7 +18,7 @@
  * @return WP_User|bool WP_User object on success, false on failure.
  */
 
-function remove_my_post_metaboxes() {
+function remove_my_post_metaboxes () {
 	if ($current_user->roles != 'administrator' || $current_user->roles != 'superadmin') {
 		remove_meta_box( 'postcustom','post','normal' ); // Custom Fields Metabox
 		remove_meta_box( 'revisionsdiv','post','normal' ); // Revisions Metabox
@@ -27,7 +27,7 @@ function remove_my_post_metaboxes() {
 	}
 }
 
-function remove_plugin_metaboxes(){
+function remove_plugin_metaboxes () {
 	if ($current_user->roles != 'administrator' || $current_user->roles != 'superadmin') {
 		// Post
 		remove_meta_box( 'the_grid_item_formats','post','normal' ); // The Grid Metabox
@@ -42,9 +42,14 @@ function remove_plugin_metaboxes(){
 	}
 }
 
-function remove_admin_menus() {
+function remove_admin_menus () {
 	if ($current_user->roles != 'administrator' || $current_user->roles != 'superadmin') {
 		remove_menu_page( 'vc-welcome' );
 		remove_menu_page( 'edit.php?post_type=soliloquy' );
 	}
+}
+
+
+function remove_admin_footer_text () {
+	echo 'Designed by <a href=" http://www.miracleholic.com " target="_blank">Miracleholic Media </a> Powered by <a href="http://bellezzalab.com" target="_blank">Bellezza Lab</a></p>';
 }

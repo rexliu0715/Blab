@@ -126,3 +126,6 @@ add_action( 'do_meta_boxes', 'remove_plugin_metaboxes' );
 
 // Remove submenu 
 add_action( 'admin_menu', 'remove_admin_menus', 999 );
+
+// Remove white label footer text
+add_action( 'admin_footer_text', 'remove_admin_footer_text', 999);
