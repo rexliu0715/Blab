@@ -691,7 +691,6 @@ do_meta_boxes($post_type, 'side', $post);
 <?php
 
 do_meta_boxes(null, 'normal', $post);
-
 if ( 'page' == $post_type ) {
 	/**
 	 * Fires after 'normal' context meta boxes have been output for the 'page' post type.

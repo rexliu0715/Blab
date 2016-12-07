@@ -44,6 +44,7 @@ elseif ( isset($_POST['wp-preview']) && 'dopreview' == $_POST['wp-preview'] )
 	$action = 'preview';
 
 $sendback = wp_get_referer();
+
 if ( ! $sendback ||
      strpos( $sendback, 'post.php' ) !== false ||
      strpos( $sendback, 'post-new.php' ) !== false ) {
