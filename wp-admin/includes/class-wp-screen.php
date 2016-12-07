@@ -1070,6 +1070,7 @@ final class WP_Screen {
 		<legend><?php echo $legend; ?></legend>
 		<?php
 		$special = array( '_title', 'cb', 'comment', 'media', 'name', 'title', 'username', 'blogname' );
+
 		foreach ( $columns as $column => $title ) {
 			// Can't hide these for they are special
 			if ( in_array( $column, $special ) ) {

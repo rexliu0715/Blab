@@ -7,8 +7,6 @@
  * @since 4.3.0
  */
 
-// Admin Panel Screen Option hooks
-
 // Bookmark hooks.
 add_action( 'admin_page_access_denied', 'wp_link_manager_disabled_message' );
 
@@ -69,8 +67,6 @@ add_action( 'admin_head-nav-menus.php', '_wp_delete_orphaned_draft_menu_items' )
 
 // Plugin hooks.
 add_filter( 'whitelist_options', 'option_update_filter' );
-
-// Plugin ACF Custom Field hooks
 
 // Plugin Install hooks.
 add_action( 'install_plugins_featured',               'install_dashboard' );
