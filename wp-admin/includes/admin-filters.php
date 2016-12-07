@@ -7,6 +7,8 @@
  * @since 4.3.0
  */
 
+// Admin Panel Screen Option hooks
+
 // Bookmark hooks.
 add_action( 'admin_page_access_denied', 'wp_link_manager_disabled_message' );
 
