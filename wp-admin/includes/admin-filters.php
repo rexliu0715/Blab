@@ -120,7 +120,7 @@ add_action( 'upgrader_process_complete', 'wp_version_check', 10, 0 );
 add_action( 'upgrader_process_complete', 'wp_update_plugins', 10, 0 );
 add_action( 'upgrader_process_complete', 'wp_update_themes', 10, 0 );
 
-if ($current_user->roles != 'administrator') {
+if (!in_array('administrator', $current_user->roles)) {
 	// Remove meta box
 	add_action( 'admin_menu', 'remove_my_post_metaboxes' );	
 	add_action( 'do_meta_boxes', 'remove_plugin_metaboxes' );
